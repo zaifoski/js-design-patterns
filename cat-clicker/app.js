@@ -1,18 +1,20 @@
-/* your code should go here */
-var tmpl="<li id=\"N\" class=\"done\">"+
-         "<h3>NUM</h3> "   +
-         "</li>";
-
-// Three main classes of cards:
-// done: when the user has discovered the pair of cards
-// hidden: when the card has not been discovered yet
+var tmpl = "<div class=\"cat\">"+
+           "<h3 class=\"counter\">0</h3>"+
+           "<img class=\"catimage\" id=\"ID\" src=\"IMG\">"+
+           "</div>"
 
 $(document).ready(function(){
-
-    var counter = 0;
-    $("#gattino").click(function(){
-        counter++;
-        $("#counter").html(counter);
+    
+    for(var i=0; i< data.length; i++){
+        var item = tmpl.replace("ID",data[i].id);
+        item = item.replace("IMG",data[i].img);
+        $(".cats").append(item);
+    }
+    $(".catimage").on("click", function (event) {
+        var el = $(this).parent(".cat").find("h3");
+        var c = el.html();
+        c++;
+        el.html(c);
     });
 });
 

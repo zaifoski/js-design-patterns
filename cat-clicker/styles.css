@@ -1,7 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Comfortaa|Courgette);
 
 /* my css */
-
+.cat{
+    float: left;
+    margin: 0 5px;
+}
 h3 {
   font-size: 3em;
   text-align: center;
