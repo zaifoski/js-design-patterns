@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Comfortaa|Courgette);
 
 /* my css */
-.cat{
+.floating{
     float: left;
     margin: 0 5px;
 }
